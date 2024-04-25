@@ -6,6 +6,24 @@
     <title>Meet My Stuffie</title>
 </head>
 <body>
-    <h1> Hello World! </h1>
+    
+    <div>
+        <div>
+            <form id="stuffie-form" action="" method="GET">
+                <input id="stuffie-name-input" class="" type="text" name="stuffie-name" placeholder="Stuffie's name?">
+                <input id=animal-type-input" class="" type="text" name="animal-type" placeholder="Animal type?">
+                <input id="color-input" class="" type="text" name="color" placeholder="Color?">
+                <input id="personality-input" class="" type="text" name="personality" placeholder="Personality">
+                <input id="child-name-input" class="" type="text" name="child-name" placeholder="Your name?">
+                <button type="submit">submit</button>
+            </form>
+
+        </div>
+        <div>
+            {% if data %}
+            <p>{{ data.choices.0.message.content }}</p>
+            {% endif %}
+        </div>
+    </div>
 </body>
 </html>
